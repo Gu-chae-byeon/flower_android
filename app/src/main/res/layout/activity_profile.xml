@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile"
+    android:background="#F5F6F8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fir"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:elevation="100dp"
+        android:outlineProvider="none"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:text="프로필"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/pretendardsemibold" />
+
+        <ImageView
+            android:id="@+id/pointborder"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/editchance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="37dp"
+            android:text="1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/pointborder"
+            app:layout_constraintTop_toTopOf="@id/pointborder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fir"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/profilephoto"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@id/sec"
+            app:layout_constraintTop_toTopOf="@id/sec"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zi존 짱짱맨 123"
+            android:fontFamily="@font/pretendardsemibold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@id/profile"
+            app:layout_constraintStart_toEndOf="@id/profile"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#어둠의 군주 플로워"
+            android:textSize="15sp"
+            android:fontFamily="@font/pretendardsemibold"
+            app:layout_constraintStart_toStartOf="@id/nickname"
+            app:layout_constraintTop_toBottomOf="@id/nickname"
+            android:textColor="#A5A5A5"/>
+        
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/edit"
+            app:layout_constraintTop_toTopOf="@id/sec"
+            app:layout_constraintEnd_toEndOf="@id/sec"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/flag"
+        app:layout_constraintEnd_toStartOf="@id/house"
+        app:layout_constraintBottom_toBottomOf="@id/house"
+        android:elevation="100dp"
+        android:layout_marginEnd="60dp"/>
+
+    <ImageView
+        android:id="@+id/house"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:elevation="100dp"/>
+
+    <ImageView
+        android:id="@+id/user"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/userclick"
+        app:layout_constraintStart_toEndOf="@id/house"
+        app:layout_constraintBottom_toBottomOf="@id/house"
+        android:elevation="100dp"
+        android:layout_marginStart="60dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
